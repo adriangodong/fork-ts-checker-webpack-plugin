@@ -1,6 +1,7 @@
+import * as path from 'path';
+
 import { createSandbox, packLocalPackage } from 'karton';
-import path from 'path';
-import { Sandbox } from 'karton';
+import type { Sandbox } from 'karton';
 
 declare global {
   let sandbox: Sandbox;
@@ -36,4 +37,4 @@ afterAll(async () => {
   await global.sandbox.cleanup();
 });
 
-jest.retryTimes(3);
+// jest.retryTimes(3);
